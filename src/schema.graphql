@@ -2,6 +2,10 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type SampleReponse {
+  data: String!
+}
+
 type Query {
-  getStarted: String!
+  getStarted: SampleReponse!
 }

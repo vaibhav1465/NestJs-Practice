@@ -6,7 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { AppResolver } from './app.resolver';
 import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
-import {  BadExceptionFilter, MyExceptionFilter } from './graph.exception.filter';
+// import {  BadExceptionFilter } from './graph.exception.filter';
 import { AppInterceptor } from './app.interceptor';
 import { MyCustomError } from './custom.error';
 
@@ -46,15 +46,15 @@ import { MyCustomError } from './custom.error';
     //   provide: APP_INTERCEPTOR,
     //   useClass: AppInterceptor,
     // },
-    {
-      provide: APP_FILTER,
-      useClass: MyExceptionFilter
-    },
-    {
+    // {
+    //   provide: APP_FILTER,
+    //   useClass: MyExceptionFilter
+    // },
+    // {
       
-        provide: APP_FILTER,
-        useClass: BadExceptionFilter,
-    }
+    //     provide: APP_FILTER,
+    //     useClass: BadExceptionFilter,
+    // }
   ]
 })
 

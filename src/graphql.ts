@@ -8,8 +8,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
+export interface SampleReponse {
+    data: string;
+}
+
 export interface IQuery {
-    getStarted(): string | Promise<string>;
+    getStarted(): SampleReponse | Promise<SampleReponse>;
 }
 
 type Nullable<T> = T | null;

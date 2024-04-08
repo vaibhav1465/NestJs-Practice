@@ -1,5 +1,6 @@
-import { Injectable, CanActivate, ExecutionContext, HttpException, BadRequestException, BadGatewayException } from '@nestjs/common';
+import { Injectable, CanActivate, ExecutionContext, HttpException, BadRequestException, BadGatewayException, NotFoundException } from '@nestjs/common';
 import { MyCustomError } from './custom.error';
+import { GraphQLError } from 'graphql';
 
 @Injectable()
 export class AppGuard implements CanActivate {
@@ -7,7 +8,8 @@ export class AppGuard implements CanActivate {
 
     console.log("APP GUARD FILE")
     // throw new BadGatewayException('Unauthorized');
-    throw new MyCustomError();
+    // throw new NotFoundException();
+    // throw new GraphQLError("Graphql Error")
     return true;
   }
 }
