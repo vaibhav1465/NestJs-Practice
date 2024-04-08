@@ -6,7 +6,7 @@ import { GraphQLError } from 'graphql';
 export class AppGuard implements CanActivate {
   canActivate(context: ExecutionContext): boolean {
 
-    console.log("APP GUARD FILE")
+    console.log("APP GUARD FILE ")
     // throw new BadGatewayException('Unauthorized');
     // throw new NotFoundException();
     // throw new GraphQLError("Graphql Error")
